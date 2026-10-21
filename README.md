@@ -36,7 +36,7 @@ Node 22+ (no framework, `node:http`), vanilla JavaScript on the front end, `@ant
 ## Run it
 
 ```bash
-git clone <this repo> && cd helpdesk-ticket-autofill
+git clone https://github.com/tommyisgoodboy-cpu/helpdesk-ticket-autofill.git && cd helpdesk-ticket-autofill
 npm install
 npm run start:mock        # offline, no API key
 # open http://localhost:3000
