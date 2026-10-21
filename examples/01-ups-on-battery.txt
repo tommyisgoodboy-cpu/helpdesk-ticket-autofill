@@ -1,0 +1,13 @@
+From: Sam Wong <sam.wong@example.com>
+To: helpdesk@example.com
+Subject: [ALERT] UPS on battery - plant room N-03
+
+Hi team,
+
+The UPS in plant room N-03 (North site) switched to battery at 09:12 and the
+room temperature is rising. Mains power looks stable on the other floors.
+Please check urgently before the battery runs down.
+
+Regards,
+Sam Wong
+Facilities

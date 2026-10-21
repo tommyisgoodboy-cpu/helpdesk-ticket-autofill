@@ -1,0 +1,16 @@
+{
+  "name": "helpdesk-ticket-autofill",
+  "version": "1.0.0",
+  "description": "LLM-assisted helpdesk ticket auto-fill: reads a fault email, classifies it with Claude, and fills a form whose user pickers have no autocomplete.",
+  "type": "module",
+  "engines": { "node": ">=22.9" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "start:mock": "TRIAGE_MODE=mock node src/server.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.137.0"
+  },
+  "license": "MIT"
+}

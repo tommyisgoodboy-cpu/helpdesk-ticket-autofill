@@ -1,0 +1,10 @@
+From: Jordan Blake <jordan.blake@example.com>
+To: helpdesk@example.com
+Subject: Badge readers offline - west entrance
+
+Staff cannot get in through the west entrance. All three card readers show
+offline and the door controller has no heartbeat since the morning.
+
+Regards,
+Jordan Blake
+Security

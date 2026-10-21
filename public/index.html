@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helpdesk – New Ticket (demo)</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="bar">
+    <strong>Acme Helpdesk</strong>
+    <span class="muted">Demo ticketing system. Fictional data only.</span>
+  </header>
+
+  <main>
+    <form id="ticket" novalidate>
+      <h1>Create ticket</h1>
+
+      <div class="grid">
+        <label>Subsystem
+          <select data-field="subsystem" required>
+            <option value="">Select…</option>
+            <option>Network</option><option>Power &amp; Cooling</option><option>Access Control</option>
+            <option>Monitoring</option><option>Storage</option><option>Applications</option>
+          </select>
+        </label>
+        <label>Region
+          <select data-field="region" required>
+            <option value="">Select…</option>
+            <option>North</option><option>South</option><option>East</option><option>West</option>
+          </select>
+        </label>
+        <label>Priority
+          <select data-field="priority" required>
+            <option value="">Select…</option>
+            <option>P1</option><option>P2</option><option>P3</option><option>P4</option>
+          </select>
+        </label>
+      </div>
+
+      <label>Summary
+        <input type="text" data-field="summary" maxlength="90" required>
+      </label>
+      <label>Description
+        <textarea data-field="description" rows="5"></textarea>
+      </label>
+
+      <div class="grid">
+        <div class="field">Caller
+          <div class="picker" data-picker="caller">
+            <button type="button" class="picker-trigger" aria-haspopup="dialog">Select user…</button>
+          </div>
+        </div>
+        <div class="field">Assignee
+          <div class="picker" data-picker="assignee">
+            <button type="button" class="picker-trigger" aria-haspopup="dialog">Select user…</button>
+          </div>
+        </div>
+        <div class="field">Regional contact
+          <div class="picker" data-picker="regional_contact">
+            <button type="button" class="picker-trigger" aria-haspopup="dialog">Select user…</button>
+          </div>
+        </div>
+      </div>
+
+      <p id="errors" class="error" role="alert" hidden></p>
+      <button type="submit" class="primary">Create ticket</button>
+    </form>
+
+    <section id="result" hidden>
+      <h2>Ticket created</h2>
+      <pre></pre>
+    </section>
+
+    <footer class="dev">
+      <span class="muted">Dev only: the auto-fill script is not part of this page. In real use it is loaded with a bookmarklet.</span>
+      <button type="button" id="inject">Simulate bookmarklet</button>
+    </footer>
+  </main>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

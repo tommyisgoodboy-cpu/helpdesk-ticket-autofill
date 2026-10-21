@@ -1,0 +1,13 @@
+From: Grace Lau <grace.lau@example.com>
+To: helpdesk@example.com
+Subject: Core switch uplink down at East site
+
+Hello,
+
+Since about 14:30 the uplink between the core switch and the distribution
+switch at E-01 (East site) is down. Users on floors 2 and 3 have intermittent
+connectivity and packet loss. Failover seems to be working but latency is high.
+
+Thanks,
+Grace Lau
+Operations
