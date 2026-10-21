@@ -1,6 +1,6 @@
 import { createServer } from 'node:http';
 import { readFile, readdir } from 'node:fs/promises';
-import { extname, join, normalize, resolve } from 'node:path';
+import { extname, join, normalize, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { USERS } from './directory.js';
 import { resolveMode, triage } from './triage.js';
@@ -30,7 +30,7 @@ async function readBody(req) {
 
 async function serveStatic(res, pathname) {
   const file = normalize(join(PUBLIC, pathname === '/' ? 'index.html' : pathname));
-  if (!file.startsWith(PUBLIC)) return json(res, 403, { error: 'Forbidden' });
+  if (file !== PUBLIC && !file.startsWith(PUBLIC + sep)) return json(res, 403, { error: 'Forbidden' });
   let body;
   try {
     body = await readFile(file);
